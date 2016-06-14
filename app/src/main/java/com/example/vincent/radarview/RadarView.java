@@ -73,8 +73,8 @@ public class RadarView extends View {
         int width = bitmap.getWidth();
         int height = bitmap.getHeight();
         Matrix matrixLocation = new Matrix();
-        float scaleWidth = ((float) 40 / width);
-        float scaleHeight = ((float) 50 / height);
+        float scaleWidth = ((float) 60 / width);
+        float scaleHeight = ((float) 80 / height);
         matrixLocation.postScale(scaleWidth, scaleHeight);
         locationBmp = Bitmap.createBitmap(bitmap, 0, 0, width, height,
                 matrixLocation, true);
@@ -138,7 +138,7 @@ public class RadarView extends View {
         canvas.drawCircle(mWidth / 2, mHeight / 2, 3 * circleRadius, paintRadarBg);
         canvas.restore();
         //设置定位图标
-        canvas.drawBitmap(locationBmp, mWidth / 2 - locationBmp.getWidth() / 2, mHeight / 2 - circleRadius, paintRadarLocation);
+        canvas.drawBitmap(locationBmp, mWidth / 2 - locationBmp.getWidth() / 2, mHeight / 2 - circleRadius-locationBmp.getHeight(), paintRadarLocation);
     }
 
     private void drawRadarDegree(Canvas canvas) {
