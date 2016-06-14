@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RadarView">
+        <attr name="radarTitle" format="string" />
+        <attr name="radarTitleColor" format="color" />
+        <attr name="radarTitleSize" format="dimension" />
+    </declare-styleable>
+</resources>
